@@ -105,8 +105,8 @@ export const About: React.FC = () => {
                   <span className="text-[#1b1a17] font-semibold">React Native & Expo</span>
                 </div>
                 <div>
-                  <span className="block text-[#6d6a62] text-[11px] font-medium">Architecture</span>
-                  <span className="text-[#1b1a17] font-semibold">Offline-First & SQLite</span>
+                  <span className="block text-[#6d6a62] text-[11px] font-medium">Specialization</span>
+                  <span className="text-[#1b1a17] font-semibold">Cross-Platform Mobile</span>
                 </div>
               </div>
             </div>
