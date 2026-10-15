@@ -1,51 +1,11 @@
 import React from 'react';
 import { 
-  CheckCircle2, 
-  Smartphone, 
-  Database, 
-  Cloud, 
-  Layers, 
-  GitPullRequest,
-  MapPin,
-  Briefcase,
-  Users
+  MapPin, 
+  Briefcase
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const About: React.FC = () => {
-  const highlights = [
-    {
-      title: "3.5+ Years Mobile Development",
-      description: "Dedicated focus on production cross-platform mobile development using React Native, TypeScript, and modern ecosystem tools.",
-      icon: Smartphone,
-    },
-    {
-      title: "iOS & Android Development",
-      description: "Building responsive native experiences across screen sizes, handling device permissions, platform nuances, and native modules.",
-      icon: Layers,
-    },
-    {
-      title: "Offline-First & Background Sync",
-      description: "Deep expertise architecting local SQLite databases, Zustand state caches, and background sync queues for spotty connectivity.",
-      icon: Database,
-    },
-    {
-      title: "API & Firebase Integrations",
-      description: "Seamless integration of RESTful services, Firebase Authentication, Cloud Messaging (FCM), Crashlytics, and Remote Config.",
-      icon: Cloud,
-    },
-    {
-      title: "End-to-End Feature Ownership",
-      description: "Taking products from design wireframes and technical breakdown to testing, app store builds (EAS/Fastlane), and production release.",
-      icon: GitPullRequest,
-    },
-    {
-      title: "Team Leadership & Client Communication",
-      description: "Leading technical decisions, coordinating development tasks across cross-functional teams, and maintaining proactive client communication.",
-      icon: Users,
-    }
-  ];
-
   return (
     <section id="about" className="py-16 md:py-24 relative border-t border-[#e6e1d6]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -62,7 +22,7 @@ export const About: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           
-          {/* Left Column: Portrait Card */}
+          {/* Left Column: Portrait Card & Domains */}
           <div className="lg:col-span-5 space-y-5">
             <div className="relative rounded-[22px] overflow-hidden bg-[#fffdf9] border border-[#e6e1d6] shadow-sm group">
               
@@ -135,12 +95,12 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Narrative & Capability Cards */}
+          {/* Right Column: Narrative & Quick Specs */}
           <div className="lg:col-span-7 space-y-5">
             
             {/* Introduction Statement Card */}
-            <div className="p-6 sm:p-7 rounded-[22px] bg-[#fffdf9] border border-[#e6e1d6] shadow-sm">
-              <p className="text-base sm:text-[17px] text-[#1b1a17] leading-relaxed font-normal mb-6">
+            <div className="p-6 sm:p-8 rounded-[22px] bg-[#fffdf9] border border-[#e6e1d6] shadow-sm space-y-6">
+              <p className="text-base sm:text-[18px] text-[#1b1a17] leading-relaxed font-normal">
                 "{PERSONAL_INFO.aboutIntro}"
               </p>
 
@@ -162,36 +122,6 @@ export const About: React.FC = () => {
                   <span className="text-[#1f6146] font-semibold">Open Worldwide</span>
                 </div>
               </div>
-            </div>
-
-            {/* Highlights Cards */}
-            <div className="space-y-3">
-              <h3 className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#6d6a62] font-semibold mb-2">
-                Core Capabilities & Highlights
-              </h3>
-
-              {highlights.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={index}
-                    className="p-4 rounded-xl bg-[#fffdf9] border border-[#e6e1d6] hover:border-[#1f6146]/60 transition-all flex items-start gap-4 shadow-sm"
-                  >
-                    <div className="p-2.5 rounded-xl bg-[#e7eee8] border border-[#d5e0d8] text-[#1f6146] shrink-0">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <div className="flex-1 space-y-1">
-                      <h4 className="text-sm font-semibold text-[#1b1a17] flex items-center justify-between">
-                        <span>{item.title}</span>
-                        <CheckCircle2 className="w-4 h-4 text-[#1f6146]" />
-                      </h4>
-                      <p className="text-xs sm:text-[13px] text-[#4a4740] leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
             </div>
 
           </div>

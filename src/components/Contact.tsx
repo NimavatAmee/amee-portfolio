@@ -41,10 +41,6 @@ export const Contact: React.FC = () => {
             Let’s build something remarkable together.
           </h2>
 
-          {/* Description */}
-          <p className="text-base sm:text-[17px] text-[#b8b3a8] leading-relaxed max-w-2xl">
-            Open to full-time and contract mobile roles globally (<strong className="text-[#f7f5f0] font-medium">Worldwide Remote across US, Europe, APAC & India timezones</strong>). Happy to talk about React Native architecture, offline-first SQLite synchronization, or the product you have in mind.
-          </p>
 
           {/* Action Buttons: White Mail Button + Bordered Copy */}
           <div className="flex flex-wrap items-center gap-3 pt-2">

@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
   role: "Senior React Native Developer",
   experienceYears: "3.5+",
   location: "Surat, Gujarat, India",
-  workPreference: "Worldwide Remote · Hybrid · Onsite",
+  workPreference: "Remote · Hybrid · Onsite",
   availabilityStatus: "Open to Worldwide Remote (All Timezones)",
   email: "ameenimavat17@gmail.com",
   phone: "+91 83202 19094",
