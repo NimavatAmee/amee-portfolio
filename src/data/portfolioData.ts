@@ -77,11 +77,11 @@ export const PROJECTS: Project[] = [
     title: "Dating App",
     subtitle: "Real-Time Chat, WebRTC Voice Calling & Monetization",
     category: "Social & Lifestyle",
-    tags: ["React Native", "WebRTC", "Firebase", "FCM", "AdMob", "RevoPush"],
+    tags: ["React Native", "WebRTC", "Python Backend", "Firebase", "FCM", "AdMob"],
     overview: "A high-engagement dating application featuring smooth swiping, real-time messaging, low-latency WebRTC voice calling, granular privacy controls, and dynamic in-app monetization.",
     myRole: "Senior React Native Developer (Tagline Infotech)",
     contributions: [
-      "Collaborated closely with backend engineers to architect and build real-time chat and low-latency WebRTC voice calling.",
+      "Collaborated closely with Python backend engineers to architect and build real-time chat and low-latency WebRTC voice calling modules.",
       "Integrated seamless Google Authentication and secure user onboarding flows.",
       "Implemented Firebase Cloud Messaging (FCM) for instant notification delivery for match alerts and incoming calls.",
       "Configured Firebase Crashlytics and Analytics to monitor crash-free sessions and user engagement metrics.",
@@ -91,7 +91,7 @@ export const PROJECTS: Project[] = [
     techStack: {
       core: ["React Native", "JavaScript / TypeScript"],
       stateAndData: ["Redux / Context", "REST APIs", "Socket.io"],
-      integrations: ["WebRTC Voice Calling", "Google Auth", "Firebase (FCM, Crashlytics, Remote Config)", "AdMob", "RevoPush OTA"]
+      integrations: ["Python Backend Services", "WebRTC Voice Calling", "Google Auth", "Firebase (FCM, Crashlytics, Remote Config)", "AdMob", "RevoPush OTA"]
     },
     conceptualType: "dating",
     accentColor: "#f7a37e"
@@ -120,22 +120,22 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "smarthaul-transport",
-    title: "SmartHaul Transport App",
-    subtitle: "Built from Scratch: Transport & Ticketing Workflows",
-    category: "Logistics & Transport",
-    tags: ["React Native", "REST APIs", "Firebase Auth", "Ticketing Workflow"],
-    overview: "A transport logistics application designed to streamline ticketing, vehicle tracking, and passenger check-ins for regional transport services.",
+    title: "SmartHaul — Bus Transport System App",
+    subtitle: "Built from Scratch: Bus Transport & Ticketing Platform",
+    category: "Bus Transport & Mobility",
+    tags: ["React Native", "Bus Transport", "Ticketing System", "REST APIs", "Firebase Auth"],
+    overview: "A dedicated bus transport and ticketing application engineered from scratch to streamline ticket validation, schedule lookups, vehicle tracking, and passenger check-ins for regional bus transport services.",
     myRole: "React Native Developer (Exelance IT)",
     contributions: [
-      "Engineered the entire mobile user interface from scratch using responsive React Native component architecture.",
-      "Integrated secure Firebase authentication workflows for driver and passenger personas.",
-      "Connected REST API endpoints for real-time ticket validations, route listings, and trip status updates.",
-      "Built clean, intuitive forms and validation logic handling offline error states gracefully."
+      "Built the complete UI from scratch and integrated REST APIs with optimized data handling for a bus transport and ticketing platform.",
+      "Implemented Firebase authentication and secure data storage to protect sensitive user and financial information.",
+      "Connected REST API endpoints for real-time ticket validations, bus route listings, and trip status updates.",
+      "Built clean, intuitive forms and validation logic handling offline transit error states gracefully."
     ],
     techStack: {
       core: ["React Native", "JavaScript"],
       stateAndData: ["React Context API", "AsyncStorage", "RESTful Services"],
-      integrations: ["Firebase Authentication", "Barcode / Ticket Verification", "Map APIs"]
+      integrations: ["Firebase Authentication", "Barcode / Ticket Verification", "Bus Route APIs"]
     },
     conceptualType: "transport",
     accentColor: "#b4441f"

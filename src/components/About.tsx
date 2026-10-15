@@ -7,7 +7,8 @@ import {
   Layers, 
   GitPullRequest,
   MapPin,
-  Briefcase
+  Briefcase,
+  Users
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
@@ -37,6 +38,11 @@ export const About: React.FC = () => {
       title: "End-to-End Feature Ownership",
       description: "Taking products from design wireframes and technical breakdown to testing, app store builds (EAS/Fastlane), and production release.",
       icon: GitPullRequest,
+    },
+    {
+      title: "Team Leadership & Client Communication",
+      description: "Leading technical decisions, coordinating development tasks across cross-functional teams, and maintaining proactive client communication.",
+      icon: Users,
     }
   ];
 
@@ -116,7 +122,7 @@ export const About: React.FC = () => {
                   'Enterprise & Workforce Logistics',
                   'Social Platforms & Tournaments',
                   'Real-Time Dating Apps',
-                  'Transport & Ticketing'
+                  'Bus Transport & Ticketing Systems'
                 ].map((domain) => (
                   <span
                     key={domain}
