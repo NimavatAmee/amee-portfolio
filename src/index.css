@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #131210;
+  --surface: #1c1a17;
+  --text: #f0ece4;
+  --muted: #a39d92;
+  --line: #2e2b26;
+  --accent: #f08a5d;
+  --accent-text: #1a120d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: #131210;
+  }
+
+  body {
+    background-color: #131210;
+    color: #f0ece4;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #f08a5d;
+    color: #1a120d;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #131210;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2e2b26;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #423e37;
+  }
+}
+
+/* Glassmorphism and ambient glow utilities */
+.glass-panel {
+  background: rgba(28, 26, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #2e2b26;
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(36, 34, 30, 0.95);
+  border-color: #f08a5d;
+  transform: translateY(-2px);
+}
+
+.badge-tag {
+  background: #1c1a17;
+  border: 1px solid #2e2b26;
+  color: #a39d92;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.badge-tag:hover {
+  border-color: #f08a5d;
+  color: #f0ece4;
+}
+
+/* Jaydeep reference style eyebrow */
+.eyebrow-text {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a39d92;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* Jaydeep reference style lede text */
+.lede-text {
+  color: #a39d92;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
