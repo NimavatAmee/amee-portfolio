@@ -32,14 +32,26 @@ export const Projects: React.FC = () => {
           bullet: 'bg-[#6a5c55]',
           badge: 'bg-[#43352f] text-[#f7f5f0]'
         };
-      default:
+      case 3:
+        // Feudr Social Platform: Soft Slate Blue Mist
         return {
-          container: 'bg-[#fffdf9] border border-[#e6e1d6] text-[#1b1a17]',
-          title: 'text-[#1b1a17]',
-          body: 'text-[#3f3c36]',
-          pill: 'bg-[rgba(27,26,23,0.06)] text-[#4a4740]',
-          bullet: 'bg-[#1f6146]',
-          badge: 'bg-[#1b1a17] text-[#f7f5f0]'
+          container: 'bg-[#e2ebf2] border border-[#c8d8e6] text-[#1d3144]',
+          title: 'text-[#182938]',
+          body: 'text-[#324557]',
+          pill: 'bg-[rgba(24,41,56,0.08)] text-[#182938]',
+          bullet: 'bg-[#2b4a64]',
+          badge: 'bg-[#182938] text-[#f7f5f0]'
+        };
+      case 4:
+      default:
+        // SmartHaul Transport App: Warm Biscuit / Amber Stone
+        return {
+          container: 'bg-[#eee6d8] border border-[#ded3c2] text-[#423626]',
+          title: 'text-[#392e20]',
+          body: 'text-[#493d2e]',
+          pill: 'bg-[rgba(57,46,32,0.08)] text-[#392e20]',
+          bullet: 'bg-[#614e35]',
+          badge: 'bg-[#392e20] text-[#f7f5f0]'
         };
     }
   };
@@ -124,7 +136,7 @@ export const Projects: React.FC = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-1 rounded-full bg-[rgba(27,26,23,0.06)] text-xs font-mono text-[#3f3c36] hover:bg-[#fffdf9] transition-colors"
+                      className={`px-2.5 py-1 rounded-full text-xs font-mono font-medium transition-colors ${style.pill}`}
                     >
                       {tag}
                     </span>

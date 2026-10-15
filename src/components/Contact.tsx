@@ -155,7 +155,7 @@ export const Contact: React.FC = () => {
 
             <span className="inline-flex items-center gap-2">
               <MapPin className="w-4 h-4 text-[#a39d92]" />
-              <span>{PERSONAL_INFO.location}, India</span>
+              <span>{PERSONAL_INFO.location}</span>
             </span>
 
             <a
