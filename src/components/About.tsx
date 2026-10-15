@@ -22,7 +22,7 @@ export const About: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           
-          {/* Left Column: Portrait Card & Domains */}
+          {/* Left Column: Portrait Card */}
           <div className="lg:col-span-5 space-y-5">
             <div className="relative rounded-[22px] overflow-hidden bg-[#fffdf9] border border-[#e6e1d6] shadow-sm group">
               
@@ -70,32 +70,9 @@ export const About: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            {/* Product Domains Box */}
-            <div className="p-5 rounded-[22px] bg-[#fffdf9] border border-[#e6e1d6] shadow-sm">
-              <h3 className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#6d6a62] font-semibold mb-3">
-                Domains Shipped
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  'Fintech & Expense Tracking',
-                  'Enterprise & Workforce Logistics',
-                  'Social Platforms & Tournaments',
-                  'Real-Time Dating Apps',
-                  'Bus Transport & Ticketing Systems'
-                ].map((domain) => (
-                  <span
-                    key={domain}
-                    className="px-3 py-1.5 rounded-full bg-[rgba(27,26,23,0.05)] text-xs text-[#3f3c36] font-medium hover:bg-[#e7eee8] hover:text-[#173d2c] transition-colors"
-                  >
-                    {domain}
-                  </span>
-                ))}
-              </div>
-            </div>
           </div>
 
-          {/* Right Column: Narrative & Quick Specs */}
+          {/* Right Column: Narrative & Domains Shipped */}
           <div className="lg:col-span-7 space-y-5">
             
             {/* Introduction Statement Card */}
@@ -121,6 +98,32 @@ export const About: React.FC = () => {
                   <span className="block text-[#1b1a17] font-semibold">Status</span>
                   <span className="text-[#1f6146] font-semibold">Open Worldwide</span>
                 </div>
+              </div>
+            </div>
+
+            {/* Domains Shipped Card - Managed Horizontally below Bio */}
+            <div className="p-6 sm:p-7 rounded-[22px] bg-[#fffdf9] border border-[#e6e1d6] shadow-sm space-y-3.5">
+              <div className="flex items-center justify-between">
+                <h3 className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#6d6a62] font-semibold">
+                  Domains Shipped
+                </h3>
+                <span className="font-mono text-[11px] text-[#6d6a62]">5 key product sectors</span>
+              </div>
+              <div className="flex flex-wrap gap-2.5 pt-0.5">
+                {[
+                  'Fintech & Expense Tracking',
+                  'Enterprise & Workforce Logistics',
+                  'Social Platforms & Tournaments',
+                  'Real-Time Dating Apps',
+                  'Bus Transport & Ticketing Systems'
+                ].map((domain) => (
+                  <span
+                    key={domain}
+                    className="inline-flex items-center px-3.5 py-2 rounded-full bg-[rgba(27,26,23,0.04)] border border-[#e6e1d6] text-xs text-[#3f3c36] font-medium hover:bg-[#e7eee8] hover:text-[#173d2c] hover:border-[#d5e0d8] transition-colors"
+                  >
+                    {domain}
+                  </span>
+                ))}
               </div>
             </div>
 
