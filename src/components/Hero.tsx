@@ -118,10 +118,10 @@ export const Hero: React.FC = () => {
                 className="bg-[#ece6e2] border border-[#ddd4ce] rounded-[20px] p-5 flex flex-col justify-between"
               >
                 <div className="font-display font-semibold text-3xl sm:text-4xl text-[#43352f] tracking-tight">
-                  10+
+                  6
                 </div>
                 <div className="text-xs text-[#6a5c55] mt-1 font-medium leading-snug">
-                  apps shipped across iOS & Android
+                  industries: fintech, enterprise, AI, social, dating, transport
                 </div>
               </motion.div>
             </div>

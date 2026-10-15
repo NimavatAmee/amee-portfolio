@@ -166,9 +166,16 @@ export const EXPERIENCES: ExperienceItem[] = [
           "Built an offline-first SQLite data layer with automatic background synchronization.",
           "Developed project intelligence analytics for readiness, bottlenecks, rework, and workforce performance."
         ]
+      },
+      {
+        name: "Refund Tracking App",
+        points: [
+          "Built a React Native / Expo app that uses AI to extract refund details from email and cross-verify them against Plaid transaction data.",
+          "Added missing-refund alerts, subscription and store-credit monitoring, and Google authentication, giving users full visibility into pending refunds."
+        ]
       }
     ],
-    techTags: ["React Native", "Expo", "TypeScript", "Zustand", "SQLite", "Background Sync", "Android Widgets", "Voice AI"]
+    techTags: ["React Native", "Expo", "TypeScript", "Zustand", "SQLite", "Plaid API", "Background Sync", "Android Widgets", "Voice AI"]
   },
   {
     id: "tagline",
@@ -176,10 +183,8 @@ export const EXPERIENCES: ExperienceItem[] = [
     role: "Senior React Native Developer",
     period: "Sep 2025 – Dec 2025",
     bullets: [
-      "Developed real-time chat and WebRTC voice calling in close collaboration with backend engineers.",
-      "Integrated Google Authentication and optimized the user onboarding and verification flow.",
-      "Implemented Firebase Cloud Messaging (FCM), Firebase Analytics, Crashlytics, and Remote Config for live feature toggling.",
-      "Integrated Google AdMob monetization strategies and configured RevoPush OTA updates for fast hotfix deployments."
+      "Developed a real-time chat module and WebRTC voice calling in close collaboration with Python backend engineers.",
+      "Implemented Google Authentication, ad integrations, Firebase Cloud Messaging (FCM) push notifications, Firebase Analytics, Crashlytics, Remote Config, and Revopush for notifications and app engagement."
     ],
     techTags: ["React Native", "WebRTC", "Google Auth", "AdMob", "FCM", "Crashlytics", "Remote Config", "RevoPush"]
   },
@@ -189,9 +194,8 @@ export const EXPERIENCES: ExperienceItem[] = [
     role: "Senior React Native Developer",
     period: "Jan 2025 – Aug 2025",
     bullets: [
-      "Built dynamic social platform features including team creation, tournament matchmaking, friend/follow flows, and profile management.",
-      "Integrated deep linking schemas across iOS and Android for frictionless invite links and campaign attribution.",
-      "Implemented WebRTC protocols for low-latency real-time voice and live-streaming communication features."
+      "Built core social features — team creation, tournaments, friend/following flows, and profile management — used across the app's active user base.",
+      "Integrated deep linking and WebRTC to power real-time communication and live-streaming functionality."
     ],
     techTags: ["React Native", "WebRTC", "Deep Linking", "Redux", "REST APIs", "Socket.io"]
   },
@@ -201,9 +205,10 @@ export const EXPERIENCES: ExperienceItem[] = [
     role: "React Native Developer",
     period: "May 2023 – Dec 2024",
     bullets: [
-      "Built SmartHaul's UI from scratch and integrated REST APIs and Firebase authentication.",
-      "Fixed critical bugs and improved SQLite database performance in Prestartr.",
-      "Implemented employee-update validation logic, audit handling, and Firebase storage fixes in PMS."
+      "Built SmartHaul's complete UI from scratch and integrated REST APIs with optimized data handling for a bus transport and ticketing platform.",
+      "Implemented Firebase authentication and secure data storage to protect sensitive user and financial information.",
+      "Resolved critical bugs and improved app performance using SQLite in Prestartr across client-specific workflows.",
+      "Developed complex employee-update logic with validation and audit handling in PMS (Project Management System), alongside Firebase data-storage fixes."
     ],
     techTags: ["React Native", "SQLite", "REST APIs", "Firebase Auth", "Firebase Storage", "Performance Optimization"]
   }
@@ -222,7 +227,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       "EAS Build",
       "JavaScript",
       "TypeScript",
-      "React Hooks"
+      "Mixpanel",
+      "Fastlane"
     ]
   },
   {
@@ -240,16 +246,14 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     id: "backend-data",
     name: "Backend & Data",
-    description: "Data persistence, cloud infrastructure, and push services.",
+    description: "Data persistence, cloud infrastructure, and financial integrations.",
     icon: "Database",
     skills: [
       "REST APIs",
-      "Firebase Authentication",
-      "Firestore",
-      "Firebase Cloud Messaging (FCM)",
-      "Analytics",
-      "Crashlytics",
-      "Remote Config",
+      "Plaid API Integration",
+      "Firebase (Auth, Firestore, FCM)",
+      "Crashlytics & Remote Config",
+      "Firebase Analytics",
       "SQLite",
       "Socket.io"
     ]
@@ -262,28 +266,26 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       "WebRTC Voice Calling",
       "Google Authentication",
-      "Google AdMob"
+      "Google AdMob",
+      "Deep Linking"
     ]
   },
   {
     id: "release-tools",
-    name: "Build, Release & Tools",
-    description: "Native IDEs, continuous delivery pipelines, and agile workflows.",
+    name: "Build, Release & Practices",
+    description: "Native IDEs, release tooling, leadership, and agile workflows.",
     icon: "Cpu",
     skills: [
-      "Xcode",
-      "Android Studio",
-      "App Store & Google Play Deployment",
-      "OTA Updates with RevoPush",
-      "Fastlane",
-      "CI/CD",
-      "Git",
-      "GitHub",
-      "GitLab",
-      "Jira",
-      "ClickUp",
-      "Agile Methodology",
-      "QA & Testing"
+      "Xcode & Android Studio",
+      "App Store & Play Store Deployment",
+      "OTA Updates (RevoPush)",
+      "CI/CD & Fastlane",
+      "Git, GitHub & GitLab",
+      "Sourcetree",
+      "Team Leadership",
+      "Client Communication",
+      "Agile (Jira, ClickUp)",
+      "QA & Software Testing"
     ]
   }
 ];
