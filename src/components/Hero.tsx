@@ -72,65 +72,33 @@ export const Hero: React.FC = () => {
 
           {/* Hero Side Column */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            
-            {/* Availability Card (Sage / Green Tint) */}
             <motion.div 
-              initial={{ opacity: 0, y: 18 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-[#e7eee8] border border-[#d5e0d8] rounded-[22px] p-6 flex flex-col gap-3"
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="bg-[#f2ebdc] border border-[#e5dbc7] rounded-[22px] p-6 sm:p-7 flex flex-col justify-between flex-1 shadow-sm"
             >
-              <div className="flex items-center justify-between gap-2 flex-wrap">
-                <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#1f6146]">
-                  <span className="w-2 h-2 rounded-full bg-[#1f6146] animate-pulse" />
-                  <span>Available for new roles</span>
-                </div>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#173d2c] text-[#f7f5f0] text-[10px] font-mono font-medium">
-                  🌍 Worldwide Remote
-                </span>
+              <div className="font-display font-semibold text-4xl sm:text-5xl text-[#4a3a1d] tracking-tight">
+                3.5+
               </div>
-
-              <div className="text-xs font-mono text-[#5b6a60] flex items-center gap-1.5 flex-wrap">
-                <span className="font-semibold text-[#173d2c]">Lately:</span>
-                <span>Offline SQLite · WebRTC · Expo EAS · Zustand</span>
+              <div className="text-sm text-[#6d6250] mt-3 font-medium leading-snug">
+                Years shipping production mobile apps across iOS & Android
               </div>
-
-              <p className="text-xs sm:text-[13px] text-[#3f4a43] leading-relaxed">
-                Looking for high-impact mobile roles — open to <strong className="font-semibold text-[#173d2c]">Worldwide Remote (any timezone)</strong>, hybrid, or onsite full-time & contract. Most comfortable owning a feature from schema and local database through to smooth 60 FPS mobile screens. Usually replies the same day.
-              </p>
             </motion.div>
 
-            {/* Stat Tiles: Sand & Clay */}
-            <div className="grid grid-cols-2 gap-4">
-              <motion.div 
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="bg-[#f2ebdc] border border-[#e5dbc7] rounded-[20px] p-5 flex flex-col justify-between"
-              >
-                <div className="font-display font-semibold text-3xl sm:text-4xl text-[#4a3a1d] tracking-tight">
-                  3.5+
-                </div>
-                <div className="text-xs text-[#6d6250] mt-1 font-medium leading-snug">
-                  years shipping production mobile apps
-                </div>
-              </motion.div>
-
-              <motion.div 
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.25 }}
-                className="bg-[#ece6e2] border border-[#ddd4ce] rounded-[20px] p-5 flex flex-col justify-between"
-              >
-                <div className="font-display font-semibold text-3xl sm:text-4xl text-[#43352f] tracking-tight">
-                  6
-                </div>
-                <div className="text-xs text-[#6a5c55] mt-1 font-medium leading-snug">
-                  industries: fintech, enterprise, AI, social, dating, transport
-                </div>
-              </motion.div>
-            </div>
-
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-[#ece6e2] border border-[#ddd4ce] rounded-[22px] p-6 sm:p-7 flex flex-col justify-between flex-1 shadow-sm"
+            >
+              <div className="font-display font-semibold text-4xl sm:text-5xl text-[#43352f] tracking-tight">
+                6
+              </div>
+              <div className="text-sm text-[#6a5c55] mt-3 font-medium leading-snug">
+                Industries: fintech, enterprise, AI, social, dating, transport
+              </div>
+            </motion.div>
           </div>
 
         </div>
