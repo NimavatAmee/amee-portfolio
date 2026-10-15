@@ -53,9 +53,9 @@ export const Contact: React.FC = () => {
             {/* Left Column: Headline, Bio & Primary Actions */}
             <div className="lg:col-span-7 space-y-6">
               
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#272521] border border-[#3a3833] text-xs font-mono text-[#a39d92]">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#272521] border border-[#3a3833] text-xs font-mono text-[#d7d2c7]">
                 <span className="w-2 h-2 rounded-full bg-[#1f6146] animate-pulse" />
-                <span>Available for Full-Time & Contract Roles</span>
+                <span>🌍 Open to Worldwide Remote & Global Roles</span>
               </div>
 
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[42px] leading-[1.1] tracking-[-0.03em] text-[#f7f5f0] max-w-lg">
@@ -63,7 +63,7 @@ export const Contact: React.FC = () => {
               </h2>
 
               <p className="text-base text-[#b8b3a8] leading-relaxed max-w-xl">
-                Open to full-time and contract mobile roles. Happy to talk about React Native architecture, offline-first SQLite synchronization, or the product you have in mind.
+                Open to full-time and contract mobile roles globally (<strong className="text-[#f7f5f0] font-medium">Worldwide Remote across US, Europe, APAC & India timezones</strong>). Happy to talk about React Native architecture, offline-first SQLite synchronization, or the product you have in mind.
               </p>
 
               {/* Action Buttons: White Mail Button + Bordered Copy */}

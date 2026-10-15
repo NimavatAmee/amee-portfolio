@@ -78,7 +78,7 @@ export const About: React.FC = () => {
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fffdf9]/95 backdrop-blur-md border border-[#e6e1d6] text-[11px] font-semibold text-[#1f6146] shadow-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#1f6146] animate-pulse" />
-                    <span>Remote · Hybrid · Onsite</span>
+                    <span>🌍 Worldwide Remote</span>
                   </span>
                   <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#fffdf9]/95 backdrop-blur-md border border-[#e6e1d6] text-[11px] text-[#4a4740] shadow-sm font-medium">
                     <MapPin className="w-3 h-3 text-[#1f6146]" />
@@ -151,7 +151,7 @@ export const About: React.FC = () => {
                 </div>
                 <div>
                   <span className="block text-[#1b1a17] font-semibold">Preference</span>
-                  <span className="text-[#6d6a62]">{PERSONAL_INFO.workPreference}</span>
+                  <span className="text-[#1f6146] font-semibold">{PERSONAL_INFO.workPreference}</span>
                 </div>
                 <div>
                   <span className="block text-[#1b1a17] font-semibold">Experience</span>
@@ -159,7 +159,7 @@ export const About: React.FC = () => {
                 </div>
                 <div>
                   <span className="block text-[#1b1a17] font-semibold">Status</span>
-                  <span className="text-[#1f6146] font-medium">Available</span>
+                  <span className="text-[#1f6146] font-semibold">Open Worldwide</span>
                 </div>
               </div>
             </div>

@@ -80,9 +80,14 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.55, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="bg-[#e7eee8] border border-[#d5e0d8] rounded-[22px] p-6 flex flex-col gap-3"
             >
-              <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#1f6146]">
-                <span className="w-2 h-2 rounded-full bg-[#1f6146] animate-pulse" />
-                <span>Available for new roles</span>
+              <div className="flex items-center justify-between gap-2 flex-wrap">
+                <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#1f6146]">
+                  <span className="w-2 h-2 rounded-full bg-[#1f6146] animate-pulse" />
+                  <span>Available for new roles</span>
+                </div>
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#173d2c] text-[#f7f5f0] text-[10px] font-mono font-medium">
+                  🌍 Worldwide Remote
+                </span>
               </div>
 
               <div className="text-xs font-mono text-[#5b6a60] flex items-center gap-1.5 flex-wrap">
@@ -91,7 +96,7 @@ export const Hero: React.FC = () => {
               </div>
 
               <p className="text-xs sm:text-[13px] text-[#3f4a43] leading-relaxed">
-                Looking for high-impact mobile roles — full-time or contract. Most comfortable owning a feature from schema and local database through to smooth 60 FPS mobile screens. Usually replies the same day.
+                Looking for high-impact mobile roles — open to <strong className="font-semibold text-[#173d2c]">Worldwide Remote (any timezone)</strong>, hybrid, or onsite full-time & contract. Most comfortable owning a feature from schema and local database through to smooth 60 FPS mobile screens. Usually replies the same day.
               </p>
             </motion.div>
 
