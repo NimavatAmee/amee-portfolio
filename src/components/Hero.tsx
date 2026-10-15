@@ -31,17 +31,12 @@ export const Hero: React.FC = () => {
 
               {/* Display Headline */}
               <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-[44px] leading-[1.1] tracking-[-0.03em] text-[#1b1a17] mb-5">
-                I build the <span className="text-[#1f6146] font-semibold">mobile experiences</span> and architectures behind products.
+                I turn complex ideas into <span className="text-[#1f6146] font-semibold">seamless mobile experiences</span>.
               </h1>
               
               {/* Lede Text */}
               <p className="text-base sm:text-[17px] text-[#3f3c36] leading-relaxed mb-4 font-normal">
-                {PERSONAL_INFO.experienceYears} engineering production cross-platform apps with React Native, TypeScript, Expo, and SQLite — from offline sync protocols to app store releases.
-              </p>
-
-              {/* Tagline */}
-              <p className="font-mono text-xs text-[#1f6146] tracking-wide font-medium">
-                TypeScript → Expo → SQLite → 60 FPS Native Screens.
+                Building high-performance iOS and Android apps with React Native, TypeScript, Expo, and SQLite — from offline-first architecture to production releases.
               </p>
             </div>
 

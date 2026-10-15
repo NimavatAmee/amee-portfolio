@@ -11,8 +11,8 @@ export const PERSONAL_INFO = {
   phone: "+91 83202 19094",
   phoneFormatted: "+91 83202 19094",
   linkedin: "https://www.linkedin.com/in/ameenimavat/",
-  headline: "Building Reliable Mobile Experiences That People Love.",
-  subheadline: "I’m Amee Nimavat, a React Native Developer with 3.5+ years of experience building cross-platform mobile applications for iOS and Android. I turn complex requirements into reliable, user-friendly mobile experiences.",
+  headline: "I turn complex ideas into seamless mobile experiences.",
+  subheadline: "Building high-performance iOS and Android apps with React Native, TypeScript, Expo, and SQLite — from offline-first architecture to production releases.",
   specialties: ["React Native", "TypeScript", "Expo", "Firebase", "Offline-First Apps"],
   aboutIntro: "I’m a React Native developer who enjoys solving real product problems through thoughtful mobile engineering. My experience spans expense tracking, employee management, social platforms, dating applications, and transport solutions. I work across the development lifecycle—from implementing features and integrating APIs to debugging, improving reliability, and preparing applications for release. I also have experience coordinating development tasks and collaborating with backend teams.",
   aboutHighlights: [
