@@ -1,8 +1,7 @@
 import React from 'react';
-import { ArrowDown, ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { MobileDeviceMockup } from './MobileDeviceMockup';
 
 export const Hero: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -170,40 +169,6 @@ export const Hero: React.FC = () => {
               <p className="text-sm text-[#4a4740] leading-relaxed">
                 WebRTC peer-to-peer voice and video protocols, camera capture pipelines, and push notifications with FCM.
               </p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Interactive React Native App Showcase */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-8 bg-[#fffdf9] border border-[#e6e1d6] rounded-[24px] p-6 sm:p-10 shadow-sm"
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-6 space-y-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e7eee8] border border-[#d5e0d8] text-xs font-semibold text-[#1f6146]">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Interactive React Native Architecture</span>
-              </span>
-              <h2 className="font-display font-medium text-2xl sm:text-3xl text-[#1b1a17] tracking-tight">
-                Inspect real app screens and underlying architecture.
-              </h2>
-              <p className="text-sm text-[#4a4740] leading-relaxed">
-                Interact with the mobile preview on the right. Switch tabs between Expense Tracking, Employee Logistics, and Dating to see how offline caches, Zustand state, and responsive native screens run in production.
-              </p>
-              <div className="pt-2 flex flex-wrap gap-2 text-xs font-mono text-[#6d6a62]">
-                <span className="px-2.5 py-1 rounded-lg bg-[#f7f5f0] border border-[#e6e1d6]">Expo SDK 52</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#f7f5f0] border border-[#e6e1d6]">SQLite Caching</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#f7f5f0] border border-[#e6e1d6]">Zustand Store</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#f7f5f0] border border-[#e6e1d6]">WebRTC Audio</span>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 flex justify-center">
-              <MobileDeviceMockup initialScreen="expense" interactive={true} variant="hero" />
             </div>
           </div>
         </motion.div>
