@@ -4,8 +4,7 @@ import {
   Phone, 
   MapPin, 
   Copy, 
-  Check, 
-  Send
+  Check
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
@@ -18,27 +17,10 @@ const LinkedInIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
 export const Contact: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2500);
-  };
-
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) return;
-
-    const subject = encodeURIComponent(`[Portfolio Inquiry] from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Hi Amee,\n\nMy name is ${formData.name} (${formData.email}).\n\nMessage:\n${formData.message}\n\nLooking forward to speaking!`
-    );
-    window.location.href = `mailto:${PERSONAL_INFO.email}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -46,101 +28,42 @@ export const Contact: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Inverted Dark Contact Card matching Yash Kava's .contact */}
-        <div className="bg-[#1b1a17] text-[#f7f5f0] rounded-[26px] p-8 sm:p-12 md:p-14 shadow-2xl relative overflow-hidden">
+        <div className="bg-[#1b1a17] text-[#f7f5f0] rounded-[26px] p-8 sm:p-12 md:p-14 shadow-2xl relative overflow-hidden space-y-7">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            
-            {/* Left Column: Headline, Bio & Primary Actions */}
-            <div className="lg:col-span-7 space-y-6">
-              
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#272521] border border-[#3a3833] text-xs font-mono text-[#d7d2c7]">
-                <span className="w-2 h-2 rounded-full bg-[#1f6146] animate-pulse" />
-                <span>🌍 Open to Worldwide Remote & Global Roles</span>
-              </div>
+          {/* Availability pill */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#272521] border border-[#3a3833] text-xs font-mono text-[#d7d2c7]">
+            <span className="w-2 h-2 rounded-full bg-[#1f6146] animate-pulse" />
+            <span>🌍 Open to Worldwide Remote & Global Roles</span>
+          </div>
 
-              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[42px] leading-[1.1] tracking-[-0.03em] text-[#f7f5f0] max-w-lg">
-                Let’s build something remarkable together.
-              </h2>
+          {/* Heading */}
+          <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[44px] leading-[1.1] tracking-[-0.03em] text-[#f7f5f0] max-w-2xl">
+            Let’s build something remarkable together.
+          </h2>
 
-              <p className="text-base text-[#b8b3a8] leading-relaxed max-w-xl">
-                Open to full-time and contract mobile roles globally (<strong className="text-[#f7f5f0] font-medium">Worldwide Remote across US, Europe, APAC & India timezones</strong>). Happy to talk about React Native architecture, offline-first SQLite synchronization, or the product you have in mind.
-              </p>
+          {/* Description */}
+          <p className="text-base sm:text-[17px] text-[#b8b3a8] leading-relaxed max-w-2xl">
+            Open to full-time and contract mobile roles globally (<strong className="text-[#f7f5f0] font-medium">Worldwide Remote across US, Europe, APAC & India timezones</strong>). Happy to talk about React Native architecture, offline-first SQLite synchronization, or the product you have in mind.
+          </p>
 
-              {/* Action Buttons: White Mail Button + Bordered Copy */}
-              <div className="flex flex-wrap items-center gap-3 pt-2">
-                <a
-                  href={`mailto:${PERSONAL_INFO.email}`}
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold text-[#1b1a17] bg-[#f7f5f0] hover:bg-white hover:shadow-lg transition-all duration-200 active:scale-95"
-                >
-                  <Mail className="w-4 h-4 text-[#1b1a17]" />
-                  <span>{PERSONAL_INFO.email}</span>
-                </a>
+          {/* Action Buttons: White Mail Button + Bordered Copy */}
+          <div className="flex flex-wrap items-center gap-3 pt-2">
+            <a
+              href={`mailto:${PERSONAL_INFO.email}`}
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold text-[#1b1a17] bg-[#f7f5f0] hover:bg-white hover:shadow-lg transition-all duration-200 active:scale-95"
+            >
+              <Mail className="w-4 h-4 text-[#1b1a17]" />
+              <span>{PERSONAL_INFO.email}</span>
+            </a>
 
-                <button
-                  type="button"
-                  onClick={() => copyToClipboard(PERSONAL_INFO.email)}
-                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-xs font-medium text-[#d7d2c7] border border-[#3a3833] hover:border-[#5f8f77] hover:text-white hover:bg-[#1f6146]/25 transition-all duration-200"
-                >
-                  {copiedEmail ? <Check className="w-3.5 h-3.5 text-[#5f8f77]" /> : <Copy className="w-3.5 h-3.5" />}
-                  <span>{copiedEmail ? 'Copied to clipboard' : 'Copy email'}</span>
-                </button>
-              </div>
-
-            </div>
-
-            {/* Right Column: Direct Quick Message Form */}
-            <div className="lg:col-span-5 bg-[#24221e] border border-[#34322d] rounded-[22px] p-6 space-y-4">
-              <h3 className="font-display font-medium text-lg text-[#f7f5f0]">
-                Send a quick message
-              </h3>
-              
-              <form onSubmit={handleSendMessage} className="space-y-3">
-                <div>
-                  <label className="block text-[11px] font-mono text-[#a39d92] uppercase mb-1">Your Name</label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="e.g. Rahul Sharma"
-                    className="w-full px-3.5 py-2 rounded-xl bg-[#1b1a17] border border-[#3a3833] text-sm text-[#f7f5f0] placeholder-[#6d6a62] focus:outline-none focus:border-[#5f8f77] transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-mono text-[#a39d92] uppercase mb-1">Your Email</label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="name@company.com"
-                    className="w-full px-3.5 py-2 rounded-xl bg-[#1b1a17] border border-[#3a3833] text-sm text-[#f7f5f0] placeholder-[#6d6a62] focus:outline-none focus:border-[#5f8f77] transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-mono text-[#a39d92] uppercase mb-1">Project or Role Details</label>
-                  <textarea
-                    required
-                    rows={3}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell me about the app or role..."
-                    className="w-full px-3.5 py-2 rounded-xl bg-[#1b1a17] border border-[#3a3833] text-sm text-[#f7f5f0] placeholder-[#6d6a62] focus:outline-none focus:border-[#5f8f77] transition-colors resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-3 rounded-xl bg-[#1f6146] hover:bg-[#2e7d5a] text-[#f7f5f0] font-semibold text-xs flex items-center justify-center gap-2 transition-colors active:scale-98"
-                >
-                  <Send className="w-3.5 h-3.5" />
-                  <span>Send Message</span>
-                </button>
-              </form>
-            </div>
-
+            <button
+              type="button"
+              onClick={() => copyToClipboard(PERSONAL_INFO.email)}
+              className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-xs font-medium text-[#d7d2c7] border border-[#3a3833] hover:border-[#5f8f77] hover:text-white hover:bg-[#1f6146]/25 transition-all duration-200"
+            >
+              {copiedEmail ? <Check className="w-3.5 h-3.5 text-[#5f8f77]" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>{copiedEmail ? 'Copied to clipboard' : 'Copy email'}</span>
+            </button>
           </div>
 
           {/* Bottom Meta Row matching Yash Kava */}
