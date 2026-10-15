@@ -12,13 +12,20 @@ import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('top');
+  const [scrollProgress, setScrollProgress] = useState<number>(0);
 
   useEffect(() => {
     const sections = ['top', 'about', 'skills', 'experience', 'projects', 'architecture', 'education', 'contact'];
 
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
+      // Calculate scroll progress percentage
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0) {
+        setScrollProgress((window.scrollY / docHeight) * 100);
+      }
 
+      // Active section spy
+      const scrollPosition = window.scrollY + 200;
       for (let i = sections.length - 1; i >= 0; i--) {
         const sectionId = sections[i];
         const element = document.getElementById(sectionId);
@@ -39,7 +46,17 @@ export const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#131210] text-[#f0ece4] flex flex-col font-sans selection:bg-[#f08a5d] selection:text-[#131210]">
+    <div className="min-h-screen bg-[#f7f5f0] text-[#1b1a17] flex flex-col font-sans selection:bg-[#1f6146] selection:text-[#f7f5f0] relative">
+      {/* Top Scroll Progress Bar */}
+      <div 
+        className="fixed top-0 left-0 h-[2.5px] bg-[#1f6146] z-[60] transition-all duration-100 ease-out" 
+        style={{ width: `${scrollProgress}%` }}
+        aria-hidden="true"
+      />
+
+      {/* Subtle Grain Overlay */}
+      <div className="grain" aria-hidden="true" />
+
       {/* Sticky Top Navbar */}
       <Navbar activeSection={activeSection} />
 

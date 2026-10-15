@@ -42,7 +42,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
     <div className={`relative mx-auto w-full transition-all duration-300 ${isModal ? 'max-w-[310px]' : 'max-w-[340px] sm:max-w-[360px]'}`}>
       
       {/* Decorative ambient background blur in warm apricot */}
-      <div className="absolute -inset-3 bg-[#f08a5d]/15 rounded-[48px] blur-2xl -z-10 pointer-events-none" />
+      <div className="absolute -inset-3 bg-[#1f6146]/15 rounded-[48px] blur-2xl -z-10 pointer-events-none" />
 
       {/* Titanium Device Frame in warm charcoal */}
       <div className="relative rounded-[42px] p-[2.5px] bg-gradient-to-b from-[#3d3a34] via-[#2e2b26] to-[#1c1a17] shadow-2xl shadow-black/80 ring-1 ring-white/10">
@@ -67,28 +67,28 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
             <div className="w-22 h-4 bg-black rounded-full flex items-center justify-center space-x-1 px-2 border border-[#2e2b26] shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-[#3d3a34]" />
               <span className="w-2 h-2 rounded-full bg-black border border-[#3d3a34] flex items-center justify-center">
-                <span className="w-1 h-1 rounded-full bg-[#f08a5d] animate-ping" />
+                <span className="w-1 h-1 rounded-full bg-[#1f6146] animate-ping" />
               </span>
             </div>
 
             <div className="flex items-center space-x-1.5 text-[#a39d92]">
-              <Wifi className="w-3 h-3 text-[#f08a5d]" />
+              <Wifi className="w-3 h-3 text-[#1f6146]" />
               <Battery className="w-3.5 h-3.5 text-[#a39d92]" />
             </div>
           </div>
 
           {/* Subheader: Conceptual UI badge & Code toggle */}
           <div className="bg-[#1c1a17] border-b border-[#2e2b26] px-3.5 py-1.5 flex items-center justify-between text-[10px]">
-            <span className="flex items-center gap-1.5 font-medium text-[#f08a5d]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#f08a5d] animate-pulse" />
+            <span className="flex items-center gap-1.5 font-medium text-[#1f6146]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1f6146] animate-pulse" />
               <span>React Native App</span>
             </span>
             <button 
               onClick={() => setShowCode(!showCode)} 
-              className="px-2 py-0.5 rounded-full bg-[#131210] border border-[#2e2b26] hover:border-[#f08a5d] text-[#a39d92] hover:text-[#f0ece4] transition-colors flex items-center gap-1 font-mono text-[9px]"
+              className="px-2 py-0.5 rounded-full bg-[#131210] border border-[#2e2b26] hover:border-[#1f6146] text-[#a39d92] hover:text-[#f0ece4] transition-colors flex items-center gap-1 font-mono text-[9px]"
               title="Toggle React Native Architecture Code"
             >
-              <Code2 className="w-2.5 h-2.5 text-[#f08a5d]" />
+              <Code2 className="w-2.5 h-2.5 text-[#1f6146]" />
               <span>{showCode ? 'View UI' : 'View Code'}</span>
             </button>
           </div>
@@ -99,19 +99,19 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
               /* Code Inspector Mode */
               <div className="space-y-2 animate-fadeIn font-mono text-[10px] text-[#f0ece4]">
                 <div className="p-2.5 rounded-xl bg-[#1c1a17] border border-[#2e2b26]">
-                  <div className="text-[#f08a5d] font-semibold mb-1">// React Native Architecture</div>
+                  <div className="text-[#1f6146] font-semibold mb-1">// React Native Architecture</div>
                   <div className="text-[#a39d92]">
-                    <span className="text-[#f08a5d]">import</span> &#123; create &#125; <span className="text-[#f08a5d]">from</span> <span className="text-[#f0ece4]">'zustand'</span>;
+                    <span className="text-[#1f6146]">import</span> &#123; create &#125; <span className="text-[#1f6146]">from</span> <span className="text-[#f0ece4]">'zustand'</span>;
                   </div>
                   <div className="text-[#a39d92]">
-                    <span className="text-[#f08a5d]">import</span> * <span className="text-[#f08a5d]">as</span> SQLite <span className="text-[#f08a5d]">from</span> <span className="text-[#f0ece4]">'expo-sqlite'</span>;
+                    <span className="text-[#1f6146]">import</span> * <span className="text-[#1f6146]">as</span> SQLite <span className="text-[#1f6146]">from</span> <span className="text-[#f0ece4]">'expo-sqlite'</span>;
                   </div>
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-[#1c1a17] border border-[#2e2b26] space-y-1">
-                  <div className="text-[#f08a5d] font-semibold">// Offline Sync Worker</div>
+                  <div className="text-[#1f6146] font-semibold">// Offline Sync Worker</div>
                   <div className="text-[#a39d92]">const useSyncStore = create((set, get) =&gt; (&#123;</div>
-                  <div className="pl-2 text-[#f0ece4]">isOnline: <span className="text-[#f08a5d]">true</span>,</div>
+                  <div className="pl-2 text-[#f0ece4]">isOnline: <span className="text-[#1f6146]">true</span>,</div>
                   <div className="pl-2 text-[#f0ece4]">pendingMutations: 0,</div>
                   <div className="pl-2 text-[#a39d92]">syncNow: async () =&gt; &#123;</div>
                   <div className="pl-4 text-[#a39d92]">await flushQueue(get().queue);</div>
@@ -119,7 +119,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                   <div className="text-[#a39d92]">&#125;));</div>
                 </div>
 
-                <div className="p-2 rounded-xl bg-[#1c1a17] border border-[#2e2b26] text-[10px] text-[#f08a5d]">
+                <div className="p-2 rounded-xl bg-[#1c1a17] border border-[#2e2b26] text-[10px] text-[#1f6146]">
                   Hermes Bytecode Engine · Native SQLite Driver · 60 FPS Lists
                 </div>
               </div>
@@ -134,7 +134,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     <div className="p-3.5 rounded-2xl bg-[#1c1a17] border border-[#2e2b26]">
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-[10px] uppercase font-medium text-[#a39d92]">Total Balance</span>
-                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#f08a5d] font-medium border border-[#2e2b26] flex items-center gap-1">
+                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#1f6146] font-medium border border-[#2e2b26] flex items-center gap-1">
                           <TrendingUp className="w-2.5 h-2.5" /> +14.2%
                         </span>
                       </div>
@@ -143,22 +143,22 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                       </div>
                       <div className="flex items-center justify-between text-[9px] text-[#a39d92] mt-2 pt-2 border-t border-[#2e2b26]">
                         <span className="flex items-center gap-1 text-[#a39d92]">
-                          <Database className="w-2.5 h-2.5 text-[#f08a5d]" /> Zustand Cache
+                          <Database className="w-2.5 h-2.5 text-[#1f6146]" /> Zustand Cache
                         </span>
-                        <span className="text-[#f08a5d]">● Offline Ready</span>
+                        <span className="text-[#1f6146]">● Offline Ready</span>
                       </div>
                     </div>
 
                     {/* AI Voice Input Card */}
-                    <div className={`p-3 rounded-2xl border transition-all ${isVoiceActive ? 'bg-[#24221e] border-[#f08a5d]' : 'bg-[#1c1a17] border-[#2e2b26]'}`}>
+                    <div className={`p-3 rounded-2xl border transition-all ${isVoiceActive ? 'bg-[#24221e] border-[#1f6146]' : 'bg-[#1c1a17] border-[#2e2b26]'}`}>
                       <div className="flex items-center justify-between mb-1.5">
                         <span className="font-medium text-[#f0ece4] flex items-center gap-1.5 text-[11px]">
-                          <Sparkles className="w-3 h-3 text-[#f08a5d]" />
+                          <Sparkles className="w-3 h-3 text-[#1f6146]" />
                           <span>AI Voice Entry</span>
                         </span>
                         <button 
                           onClick={() => setIsVoiceActive(!isVoiceActive)}
-                          className={`p-1.5 rounded-full transition-all ${isVoiceActive ? 'bg-[#f08a5d] text-[#131210] animate-pulse' : 'bg-[#131210] text-[#a39d92] hover:text-[#f0ece4]'}`}
+                          className={`p-1.5 rounded-full transition-all ${isVoiceActive ? 'bg-[#1f6146] text-[#131210] animate-pulse' : 'bg-[#131210] text-[#a39d92] hover:text-[#f0ece4]'}`}
                         >
                           <Mic className="w-3 h-3" />
                         </button>
@@ -167,11 +167,11 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                       {isVoiceActive ? (
                         <div className="space-y-1">
                           <div className="flex items-center gap-1 h-3.5">
-                            <span className="w-1 bg-[#f08a5d] rounded-full h-2 animate-bounce" />
-                            <span className="w-1 bg-[#f08a5d] rounded-full h-3.5 animate-bounce delay-75" />
-                            <span className="w-1 bg-[#f08a5d] rounded-full h-2.5 animate-bounce delay-150" />
-                            <span className="w-1 bg-[#f08a5d] rounded-full h-2 animate-bounce" />
-                            <span className="text-[10px] text-[#f08a5d] ml-1 font-medium">"Coffee at Blue Bottle $6.50"</span>
+                            <span className="w-1 bg-[#1f6146] rounded-full h-2 animate-bounce" />
+                            <span className="w-1 bg-[#1f6146] rounded-full h-3.5 animate-bounce delay-75" />
+                            <span className="w-1 bg-[#1f6146] rounded-full h-2.5 animate-bounce delay-150" />
+                            <span className="w-1 bg-[#1f6146] rounded-full h-2 animate-bounce" />
+                            <span className="text-[10px] text-[#1f6146] ml-1 font-medium">"Coffee at Blue Bottle $6.50"</span>
                           </div>
                           <p className="text-[9px] text-[#a39d92]">Categorized: [Dining] · Saved to SQLite</p>
                         </div>
@@ -184,7 +184,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     <div className="p-2.5 rounded-xl bg-[#1c1a17] border border-[#2e2b26]">
                       <div className="flex items-center justify-between text-[10px] font-medium text-[#f0ece4] mb-1.5">
                         <span>Android Home Widget</span>
-                        <span className="text-[9px] text-[#f08a5d]">1-Tap Fast Add</span>
+                        <span className="text-[9px] text-[#1f6146]">1-Tap Fast Add</span>
                       </div>
                       <div className="grid grid-cols-3 gap-1.5 text-center">
                         <div className="p-1.5 rounded-lg bg-[#131210] border border-[#2e2b26] text-[10px] text-[#f0ece4]">
@@ -207,7 +207,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                       <div className="text-[10px] uppercase font-medium text-[#a39d92]">Recent Activity</div>
                       <div className="p-2 rounded-xl bg-[#1c1a17] border border-[#2e2b26] flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 rounded-lg bg-[#131210] text-[#f08a5d] flex items-center justify-center text-[10px] font-bold border border-[#2e2b26]">✈</div>
+                          <div className="w-6 h-6 rounded-lg bg-[#131210] text-[#1f6146] flex items-center justify-center text-[10px] font-bold border border-[#2e2b26]">✈</div>
                           <div>
                             <div className="text-[#f0ece4] font-medium text-[11px]">Flight Tickets</div>
                             <div className="text-[9px] text-[#a39d92]">Offline Synced</div>
@@ -228,9 +228,9 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     <div className="p-3.5 rounded-2xl bg-[#1c1a17] border border-[#2e2b26]">
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-[10px] font-medium text-[#a39d92] uppercase flex items-center gap-1">
-                          <Ship className="w-3 h-3 text-[#f08a5d]" /> Vessel Alpha
+                          <Ship className="w-3 h-3 text-[#1f6146]" /> Vessel Alpha
                         </span>
-                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#f08a5d] font-medium border border-[#2e2b26]">
+                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#1f6146] font-medium border border-[#2e2b26]">
                           En Route
                         </span>
                       </div>
@@ -238,7 +238,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                         Shipping Workforce Ops
                       </div>
                       <div className="flex items-center gap-2 text-[9px] text-[#a39d92] mt-2 pt-2 border-t border-[#2e2b26]">
-                        <span className="flex items-center gap-1 text-[#f08a5d]">
+                        <span className="flex items-center gap-1 text-[#1f6146]">
                           <Database className="w-2.5 h-2.5" /> SQLite Offline Layer
                         </span>
                       </div>
@@ -247,13 +247,13 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     {/* Automatic Background Sync Status */}
                     <div className="p-2.5 rounded-xl bg-[#1c1a17] border border-[#2e2b26] flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-[#f08a5d] animate-pulse" />
+                        <span className="w-2 h-2 rounded-full bg-[#1f6146] animate-pulse" />
                         <div>
                           <div className="text-[10px] font-medium text-[#f0ece4]">Auto Background Sync</div>
                           <div className="text-[9px] text-[#a39d92]">Queue active · All mutations synced</div>
                         </div>
                       </div>
-                      <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#f08a5d] border border-[#2e2b26] font-mono">
+                      <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#1f6146] border border-[#2e2b26] font-mono">
                         Synced
                       </span>
                     </div>
@@ -262,15 +262,15 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     <div className="p-3 rounded-2xl bg-[#1c1a17] border border-[#2e2b26] space-y-2">
                       <div className="flex items-center justify-between text-[10px]">
                         <span className="font-medium text-[#f0ece4]">Project Readiness</span>
-                        <span className="font-serif text-base text-[#f08a5d]">94.8%</span>
+                        <span className="font-serif text-base text-[#1f6146]">94.8%</span>
                       </div>
                       <div className="w-full bg-[#131210] rounded-full h-1.5 overflow-hidden border border-[#2e2b26]">
-                        <div className="bg-[#f08a5d] h-full rounded-full w-[95%]" />
+                        <div className="bg-[#1f6146] h-full rounded-full w-[95%]" />
                       </div>
                       <div className="grid grid-cols-2 gap-2 pt-1 text-[9px]">
                         <div className="p-1.5 rounded-lg bg-[#131210] border border-[#2e2b26]">
                           <div className="text-[#a39d92]">Bottlenecks Flagged</div>
-                          <div className="text-[#f08a5d] font-semibold text-[10px]">0 Blockers</div>
+                          <div className="text-[#1f6146] font-semibold text-[10px]">0 Blockers</div>
                         </div>
                         <div className="p-1.5 rounded-lg bg-[#131210] border border-[#2e2b26]">
                           <div className="text-[#a39d92]">Rework Rate</div>
@@ -282,9 +282,9 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     {/* RBAC Permission Pill */}
                     <div className="p-2 rounded-xl bg-[#1c1a17] border border-[#2e2b26] flex items-center justify-between text-[10px]">
                       <span className="text-[#a39d92] flex items-center gap-1">
-                        <ShieldCheck className="w-3 h-3 text-[#f08a5d]" /> Role-Based Access
+                        <ShieldCheck className="w-3 h-3 text-[#1f6146]" /> Role-Based Access
                       </span>
-                      <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-[#131210] text-[#f08a5d] border border-[#2e2b26]">
+                      <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-[#131210] text-[#1f6146] border border-[#2e2b26]">
                         Admin / Lead RBAC
                       </span>
                     </div>
@@ -298,10 +298,10 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     
                     <div className="p-3.5 rounded-2xl bg-[#1c1a17] border border-[#2e2b26]">
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-[10px] font-medium text-[#f08a5d] uppercase flex items-center gap-1">
-                          <Flame className="w-3 h-3 text-[#f08a5d]" /> New Match
+                        <span className="text-[10px] font-medium text-[#1f6146] uppercase flex items-center gap-1">
+                          <Flame className="w-3 h-3 text-[#1f6146]" /> New Match
                         </span>
-                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#f08a5d] font-medium border border-[#2e2b26]">
+                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#1f6146] font-medium border border-[#2e2b26]">
                           98% Match
                         </span>
                       </div>
@@ -312,14 +312,14 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
 
                     {/* WebRTC Live Calling Card */}
                     <div className="p-3 rounded-2xl bg-[#1c1a17] border border-[#2e2b26] text-center space-y-2">
-                      <div className="w-10 h-10 mx-auto rounded-full p-[1.5px] bg-[#f08a5d]">
+                      <div className="w-10 h-10 mx-auto rounded-full p-[1.5px] bg-[#1f6146]">
                         <div className="w-full h-full rounded-full bg-[#131210] flex items-center justify-center font-serif text-[#f0ece4] text-xs">
                           Elena
                         </div>
                       </div>
                       <div>
                         <div className="text-[11px] font-medium text-[#f0ece4]">WebRTC Voice Call</div>
-                        <div className="text-[9px] text-[#f08a5d] flex items-center justify-center gap-1 font-mono">
+                        <div className="text-[9px] text-[#1f6146] flex items-center justify-center gap-1 font-mono">
                           <Radio className="w-2.5 h-2.5 animate-pulse" /> Connected · 03:42
                         </div>
                       </div>
@@ -327,7 +327,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                         <span className="p-1.5 rounded-full bg-[#131210] text-[#a39d92] border border-[#2e2b26]">
                           <Volume2 className="w-3 h-3" />
                         </span>
-                        <span className="p-1.5 rounded-full bg-[#b4441f] text-[#f0ece4] shadow">
+                        <span className="p-1.5 rounded-full bg-[#173d2c] text-[#f0ece4] shadow">
                           <PhoneCall className="w-3 h-3 rotate-[135deg]" />
                         </span>
                         <span className="p-1.5 rounded-full bg-[#131210] text-[#a39d92] border border-[#2e2b26]">
@@ -340,7 +340,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     <div className="p-2.5 rounded-xl bg-[#1c1a17] border border-[#2e2b26] text-[10px] space-y-1.5">
                       <div className="flex items-center justify-between text-[#a39d92]">
                         <span>FCM Notification</span>
-                        <span className="text-[#f08a5d]">Delivered</span>
+                        <span className="text-[#1f6146]">Delivered</span>
                       </div>
                       <div className="p-2 rounded-lg bg-[#131210] border border-[#2e2b26] text-[#f0ece4]">
                         "Hey! Are you free for a quick call?"
@@ -359,7 +359,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                         <span className="text-[10px] uppercase font-medium text-[#a39d92]">
                           Tournament Finals
                         </span>
-                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#f08a5d] font-medium border border-[#2e2b26]">
+                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#1f6146] font-medium border border-[#2e2b26]">
                           Live Stream
                         </span>
                       </div>
@@ -369,14 +369,14 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     </div>
 
                     <div className="p-2.5 rounded-xl bg-[#1c1a17] border border-[#2e2b26] space-y-2">
-                      <div className="flex items-center justify-between text-[10px] font-medium text-[#f08a5d]">
+                      <div className="flex items-center justify-between text-[10px] font-medium text-[#1f6146]">
                         <span>Team Showdown</span>
                         <span className="text-[9px] font-mono text-[#a39d92]">Deep Link Schemas</span>
                       </div>
                       <div className="space-y-1">
                         <div className="flex items-center justify-between p-1.5 rounded bg-[#131210] border border-[#2e2b26] text-[10px]">
                           <span className="text-[#f0ece4]">⚔ Team Apex</span>
-                          <span className="text-[#f08a5d] font-bold">3 WINS</span>
+                          <span className="text-[#1f6146] font-bold">3 WINS</span>
                         </div>
                         <div className="flex items-center justify-between p-1.5 rounded bg-[#131210] border border-[#2e2b26] text-[10px]">
                           <span className="text-[#a39d92]">⚔ Team Nova</span>
@@ -387,9 +387,9 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
 
                     <div className="p-2 rounded-xl bg-[#1c1a17] border border-[#2e2b26] text-[10px] text-[#f0ece4] flex items-center justify-between">
                       <span className="flex items-center gap-1 text-[#a39d92]">
-                        <Users className="w-3 h-3 text-[#f08a5d]" /> Social Graph: 1.4k
+                        <Users className="w-3 h-3 text-[#1f6146]" /> Social Graph: 1.4k
                       </span>
-                      <span className="text-[#f08a5d]">WebRTC Voice Room</span>
+                      <span className="text-[#1f6146]">WebRTC Voice Room</span>
                     </div>
 
                   </div>
@@ -404,7 +404,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                         <span className="text-[10px] uppercase font-medium text-[#a39d92]">
                           SmartHaul Fleet
                         </span>
-                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#f08a5d] font-medium border border-[#2e2b26]">
+                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#131210] text-[#1f6146] font-medium border border-[#2e2b26]">
                           Route Active
                         </span>
                       </div>
@@ -414,7 +414,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     </div>
 
                     <div className="p-2.5 rounded-xl bg-[#1c1a17] border border-[#2e2b26] space-y-1.5">
-                      <div className="text-[10px] font-medium text-[#f08a5d] flex items-center gap-1">
+                      <div className="text-[10px] font-medium text-[#1f6146] flex items-center gap-1">
                         <MapPin className="w-3 h-3" /> Stop Checkpoints
                       </div>
                       <div className="text-[10px] text-[#f0ece4]">Depot A ➔ Terminal B (On Schedule)</div>
@@ -423,13 +423,13 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
 
                     <div className="p-2.5 rounded-xl bg-[#1c1a17] border border-[#2e2b26] flex items-center justify-between text-[10px]">
                       <div className="flex items-center gap-2">
-                        <QrCode className="w-4 h-4 text-[#f08a5d]" />
+                        <QrCode className="w-4 h-4 text-[#1f6146]" />
                         <div>
                           <div className="font-medium text-[#f0ece4]">Ticket #TX-8842</div>
                           <div className="text-[9px] text-[#a39d92]">Validated Pass</div>
                         </div>
                       </div>
-                      <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-[#131210] text-[#f08a5d] border border-[#2e2b26]">
+                      <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-[#131210] text-[#1f6146] border border-[#2e2b26]">
                         VERIFIED
                       </span>
                     </div>
@@ -461,7 +461,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
                     }}
                     className={`flex flex-col items-center py-1 px-2 rounded-lg transition-all text-[9px] ${
                       isActive 
-                        ? 'bg-[#1c1a17] text-[#f08a5d] font-medium border border-[#2e2b26]' 
+                        ? 'bg-[#1c1a17] text-[#1f6146] font-medium border border-[#2e2b26]' 
                         : 'text-[#a39d92] hover:text-[#f0ece4]'
                     }`}
                   >
@@ -485,7 +485,7 @@ export const MobileDeviceMockup: React.FC<MobileDeviceMockupProps> = ({
       {/* Caption Tag */}
       <div className="mt-2 text-center">
         <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#1c1a17] border border-[#2e2b26] text-[10px] text-[#a39d92]">
-          <Smartphone className="w-3 h-3 text-[#f08a5d]" />
+          <Smartphone className="w-3 h-3 text-[#1f6146]" />
           <span>React Native Interactive Conceptual Mockup</span>
         </span>
       </div>

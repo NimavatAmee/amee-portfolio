@@ -1,119 +1,143 @@
 import React from 'react';
-import { 
-  Smartphone,
-  Info
-} from 'lucide-react';
 import { PROJECTS } from '../data/portfolioData';
 
 export const Projects: React.FC = () => {
+  // Styles aligned with Yash Kava's proj-green, proj-sand, proj-clay, and card surfaces
+  const getCardStyle = (index: number) => {
+    switch (index) {
+      case 0:
+        return {
+          container: 'bg-[#e7eee8] border border-[#d5e0d8] text-[#173d2c]',
+          title: 'text-[#173d2c]',
+          body: 'text-[#3f4a43]',
+          pill: 'bg-[rgba(23,61,44,0.1)] text-[#173d2c]',
+          bullet: 'bg-[#1f6146]',
+          badge: 'bg-[#173d2c] text-[#f7f5f0]'
+        };
+      case 1:
+        return {
+          container: 'bg-[#f2ebdc] border border-[#e5dbc7] text-[#4a3a1d]',
+          title: 'text-[#4a3a1d]',
+          body: 'text-[#494133]',
+          pill: 'bg-[rgba(74,58,29,0.08)] text-[#4a3a1d]',
+          bullet: 'bg-[#7a6438]',
+          badge: 'bg-[#4a3a1d] text-[#f7f5f0]'
+        };
+      case 2:
+        return {
+          container: 'bg-[#ece6e2] border border-[#ddd4ce] text-[#43352f]',
+          title: 'text-[#43352f]',
+          body: 'text-[#463b35]',
+          pill: 'bg-[rgba(67,53,47,0.08)] text-[#43352f]',
+          bullet: 'bg-[#6a5c55]',
+          badge: 'bg-[#43352f] text-[#f7f5f0]'
+        };
+      default:
+        return {
+          container: 'bg-[#fffdf9] border border-[#e6e1d6] text-[#1b1a17]',
+          title: 'text-[#1b1a17]',
+          body: 'text-[#3f3c36]',
+          pill: 'bg-[rgba(27,26,23,0.06)] text-[#4a4740]',
+          bullet: 'bg-[#1f6146]',
+          badge: 'bg-[#1b1a17] text-[#f7f5f0]'
+        };
+    }
+  };
+
   return (
-    <section id="projects" className="py-20 md:py-28 relative bg-[#131210] border-t border-[#2e2b26]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-16 md:py-24 relative border-t border-[#e6e1d6]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="space-y-2 mb-16">
-          <p className="text-xs uppercase tracking-widest text-[#a39d92] font-medium">
-            Projects
+        <div className="space-y-2 mb-12">
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#6d6a62] font-medium">
+            Selected Work
           </p>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-[#f0ece4] tracking-tight">
+              <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#1b1a17] tracking-tight">
                 Mobile applications I shipped.
               </h2>
-              <p className="text-sm text-[#a39d92] max-w-2xl mt-2 leading-relaxed">
+              <p className="text-sm text-[#4a4740] max-w-2xl mt-1.5 leading-relaxed">
                 Production mobile projects spanning offline-first architectures, real-time voice protocols, and dynamic state machines.
               </p>
             </div>
-            <div className="text-xs text-[#a39d92] font-mono bg-[#1c1a17] px-3 py-1.5 rounded-full border border-[#2e2b26] self-start md:self-auto">
-              5 Production Case Studies
+            <div className="text-xs font-mono text-[#6d6a62] bg-[#fffdf9] px-3 py-1.5 rounded-full border border-[#e6e1d6] self-start md:self-auto shadow-sm">
+              5 Production Apps
             </div>
           </div>
         </div>
 
-        {/* Project Cards Grid matching Jaydeep reference portfolio */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PROJECTS.map((project) => (
-            <article
-              key={project.id}
-              className="flex flex-col justify-between rounded-xl bg-[#1c1a17] border border-[#2e2b26] hover:border-[#f08a5d]/60 transition-all duration-300 group overflow-hidden"
-            >
-              {/* Card Top Head */}
-              <div className="p-6 pb-4 border-b border-[#2e2b26]">
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <span className="text-xs text-[#f08a5d] font-medium uppercase tracking-wide">
-                    {project.category}
-                  </span>
-                  <span className="text-[10px] text-[#a39d92] font-mono px-2 py-0.5 rounded-full bg-[#131210] border border-[#2e2b26]">
-                    React Native
-                  </span>
-                </div>
+        {/* Project Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {PROJECTS.map((project, index) => {
+            const style = getCardStyle(index);
+            const isFeatured = index === 0;
 
-                <h3 className="font-serif text-2xl font-normal text-[#f0ece4] tracking-tight group-hover:text-[#f08a5d] transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-xs text-[#a39d92] mt-1 line-clamp-1">
-                  {project.subtitle}
-                </p>
-
-                <div className="mt-4 pt-3 border-t border-[#2e2b26] flex items-center justify-between text-xs text-[#a39d92]">
-                  <span className="flex items-center gap-1.5 font-medium text-[#f0ece4]">
-                    <Smartphone className="w-3.5 h-3.5 text-[#f08a5d]" />
-                    <span>Role: {project.myRole.split('(')[0].trim()}</span>
-                  </span>
-                </div>
-              </div>
-
-              {/* Card Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                
-                {/* Overview */}
-                <p className="text-xs sm:text-sm text-[#a39d92] leading-relaxed">
-                  {project.overview}
-                </p>
-
-                {/* Key Technical Contributions */}
-                <div className="space-y-2 pt-1">
-                  <div className="text-[10px] uppercase tracking-widest text-[#a39d92] font-medium">
-                    Key Technical Impact
+            return (
+              <article
+                key={project.id}
+                className={`rounded-[22px] p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${style.container} ${isFeatured ? 'md:col-span-2' : ''}`}
+              >
+                <div>
+                  {/* Card Header & Badge */}
+                  <div className="flex items-center justify-between gap-3 mb-4">
+                    <span className={`font-mono text-[11px] px-2.5 py-0.5 rounded-full font-semibold ${style.badge}`}>
+                      0{index + 1}
+                    </span>
+                    <span className={`text-xs font-mono uppercase tracking-wider font-semibold ${style.pill} px-2.5 py-0.5 rounded-full`}>
+                      {project.category}
+                    </span>
                   </div>
-                  <ul className="space-y-2 pl-3">
-                    {project.contributions.slice(0, 3).map((item, idx) => (
-                      <li key={idx} className="text-xs sm:text-sm text-[#f0ece4] leading-relaxed relative pl-3.5">
-                        <span className="absolute left-0 top-2 w-1.5 h-[1px] bg-[#f08a5d]" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+
+                  {/* Title & Subtitle */}
+                  <h3 className={`font-display font-medium text-2xl sm:text-3xl tracking-tight mb-1 ${style.title}`}>
+                    {project.title}
+                  </h3>
+                  <p className={`text-xs font-mono mb-4 opacity-80`}>
+                    {project.subtitle} · <span className="font-semibold">{project.myRole.split('(')[0].trim()}</span>
+                  </p>
+
+                  {/* Overview */}
+                  <p className={`text-sm sm:text-[15px] leading-relaxed mb-5 ${style.body}`}>
+                    {project.overview}
+                  </p>
+
+                  {/* Key Contributions / Impact */}
+                  <div className="space-y-2 mb-6">
+                    <div className="font-mono text-[11px] uppercase tracking-wider font-semibold opacity-75">
+                      Key Technical Impact
+                    </div>
+                    <ul className="space-y-2">
+                      {project.contributions.slice(0, isFeatured ? 4 : 3).map((item, idx) => (
+                        <li key={idx} className={`text-xs sm:text-sm leading-relaxed relative pl-4 ${style.body}`}>
+                          <span className={`absolute left-0 top-2 w-1.5 h-1.5 rounded-full opacity-70 ${style.bullet}`} />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
                 {/* Tech Tags */}
-                <div className="pt-3 border-t border-[#2e2b26]">
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-0.5 rounded-full bg-[#131210] border border-[#2e2b26] text-[11px] font-mono text-[#a39d92]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                <div className="pt-4 border-t border-black/10 flex flex-wrap gap-1.5">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-1 rounded-full bg-[rgba(27,26,23,0.06)] text-xs font-mono text-[#3f3c36] hover:bg-[#fffdf9] transition-colors"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {/* Footnote on projects */}
-        <div className="mt-12 p-4 rounded-xl bg-[#1c1a17] border border-[#2e2b26] flex items-center gap-3 text-xs text-[#a39d92]">
-          <Info className="w-4 h-4 text-[#f08a5d] shrink-0" />
-          <span>
-            Every case study distinguishes my specific engineering contributions from the broader product team, reflecting hands-on production code delivered.
-          </span>
+              </article>
+            );
+          })}
         </div>
 
       </div>
     </section>
   );
 };
+
+export default Projects;

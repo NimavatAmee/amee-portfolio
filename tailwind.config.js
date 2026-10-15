@@ -8,45 +8,54 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Exact Jaydeep Agravat Portfolio Color Palette
-        warm: {
-          bg: '#131210',       // --bg: warm charcoal dark
-          surface: '#1c1a17',  // --surface: warm dark surface
-          line: '#2e2b26',     // --line: fine dark border line
-          text: '#f0ece4',     // --text: cream white
-          muted: '#a39d92',    // --muted: warm stone gray
-          accent: '#f08a5d',   // --accent: apricot coral
-          accentDark: '#b4441f',
-          accentText: '#1a120d',
-          hover: '#24221e',
+        // Exact Yash Kava Portfolio Design Tokens
+        paper: '#f7f5f0',        // Warm tactile paper
+        ink: {
+          DEFAULT: '#1b1a17',    // Deep espresso dark
+          soft: '#3f3c36',       // Medium dark for body
+          muted: '#6d6a62',      // Secondary taupe gray
         },
-        dark: {
-          950: '#131210',
-          900: '#1c1a17',
-          850: '#22201d',
-          800: '#2e2b26',
-          700: '#3d3a34',
-          600: '#524e47',
+        line: '#e6e1d6',         // Hairline border
+        card: '#fffdf9',         // Warm white card surface
+        
+        // Green Accent Family
+        green: {
+          DEFAULT: '#1f6146',    // Forest pine green
+          deep: '#173d2c',       // Dark forest
+          bg: '#e7eee8',         // Gentle sage / mint tint
+          line: '#d5e0d8',       // Sage border
+          mute: '#5b6a60',       // Muted sage
         },
-        accent: {
-          coral: '#f08a5d',
-          terracotta: '#b4441f',
-          peach: '#f7a37e',
-        }
+
+        // Sand Family
+        sand: {
+          DEFAULT: '#f2ebdc',    // Warm desert sand
+          line: '#e5dbc7',
+          ink: '#4a3a1d',
+          mute: '#6d6250',
+        },
+
+        // Clay Family
+        clay: {
+          DEFAULT: '#ece6e2',    // Warm clay
+          line: '#ddd4ce',
+          ink: '#43352f',
+          mute: '#6a5c55',
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        serif: ['"Instrument Serif"', '"Iowan Old Style"', 'Georgia', 'serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
       animation: {
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float': 'float 5s ease-in-out infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(-6px)' },
         }
       }
     },

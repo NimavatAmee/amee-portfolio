@@ -5,8 +5,7 @@ import {
   Database, 
   Radio, 
   Cpu, 
-  Search, 
-  Check
+  Search
 } from 'lucide-react';
 import { SKILL_CATEGORIES } from '../data/portfolioData';
 
@@ -47,37 +46,37 @@ export const Skills: React.FC = () => {
   const totalSkillsCount = SKILL_CATEGORIES.reduce((acc, cat) => acc + cat.skills.length, 0);
 
   return (
-    <section id="skills" className="py-20 md:py-28 relative bg-[#131210] border-t border-[#2e2b26]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-16 md:py-24 relative border-t border-[#e6e1d6]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div className="space-y-2">
-            <p className="text-xs uppercase tracking-widest text-[#a39d92] font-medium">
-              Technical Skills
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#6d6a62] font-medium">
+              Technical Stack
             </p>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-[#f0ece4] tracking-tight">
-              What I work with.
+            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#1b1a17] tracking-tight">
+              Technologies & frameworks I rely on.
             </h2>
-            <p className="text-sm text-[#a39d92] max-w-xl">
-              Curated directly from verified production work across cross-platform mobile apps, offline architectures, and real-time integrations.
+            <p className="text-sm text-[#4a4740] max-w-xl">
+              Curated from verified production work across cross-platform mobile apps, offline architectures, and real-time integrations.
             </p>
           </div>
 
           {/* Search Bar */}
           <div className="relative w-full md:w-72">
-            <Search className="w-4 h-4 text-[#a39d92] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#6d6a62] absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search skill (e.g. SQLite, WebRTC)..."
-              className="w-full pl-9 pr-4 py-2 bg-[#1c1a17] border border-[#2e2b26] rounded-full text-xs text-[#f0ece4] placeholder-[#a39d92] focus:outline-none focus:border-[#f08a5d] transition-colors"
+              className="w-full pl-9 pr-4 py-2 bg-[#fffdf9] border border-[#e6e1d6] rounded-full text-xs text-[#1b1a17] placeholder-[#6d6a62] focus:outline-none focus:border-[#1f6146] transition-colors shadow-sm"
             />
             {searchTerm && (
               <button
                 onClick={() => setSearchTerm('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#a39d92] hover:text-[#f0ece4] text-xs"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6d6a62] hover:text-[#1b1a17] text-xs font-mono"
               >
                 ✕
               </button>
@@ -85,92 +84,80 @@ export const Skills: React.FC = () => {
           </div>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap gap-2 mb-10">
+        {/* Filter Pills */}
+        <div className="flex flex-wrap items-center gap-2 mb-8">
           <button
             onClick={() => setSelectedCategory('all')}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
               selectedCategory === 'all'
-                ? 'bg-[#2e2b26] text-[#f08a5d] border border-[#f08a5d]/40'
-                : 'bg-[#1c1a17] border border-[#2e2b26] text-[#a39d92] hover:text-[#f0ece4]'
+                ? 'bg-[#1b1a17] text-[#f7f5f0] shadow-sm'
+                : 'bg-[#fffdf9] text-[#6d6a62] border border-[#e6e1d6] hover:border-[#1f6146] hover:text-[#1b1a17]'
             }`}
           >
-            All Categories ({totalSkillsCount})
+            All Skills ({totalSkillsCount})
           </button>
           {SKILL_CATEGORIES.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
+              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
                 selectedCategory === cat.id
-                  ? 'bg-[#2e2b26] text-[#f08a5d] border border-[#f08a5d]/40'
-                  : 'bg-[#1c1a17] border border-[#2e2b26] text-[#a39d92] hover:text-[#f0ece4]'
+                  ? 'bg-[#e7eee8] text-[#173d2c] border border-[#d5e0d8]'
+                  : 'bg-[#fffdf9] text-[#6d6a62] border border-[#e6e1d6] hover:border-[#1f6146] hover:text-[#1b1a17]'
               }`}
             >
-              {cat.name} ({cat.skills.length})
+              {cat.name}
             </button>
           ))}
         </div>
 
-        {/* Skills Grid */}
-        {filteredCategories.length === 0 ? (
-          <div className="p-12 text-center rounded-2xl bg-[#1c1a17] border border-[#2e2b26]">
-            <p className="text-sm text-[#a39d92] mb-2">No skills matched "{searchTerm}".</p>
-            <button
-              onClick={() => { setSearchTerm(''); setSelectedCategory('all'); }}
-              className="text-xs text-[#f08a5d] hover:underline"
-            >
-              Clear filters
-            </button>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredCategories.map((group) => {
-              const Icon = iconMap[group.icon] || Cpu;
-              return (
-                <div
-                  key={group.id}
-                  className="p-6 rounded-2xl bg-[#1c1a17] border border-[#2e2b26] hover:border-[#f08a5d]/60 transition-colors flex flex-col justify-between"
-                >
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2.5 rounded-xl bg-[#131210] border border-[#2e2b26] text-[#f08a5d]">
-                        <Icon className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h3 className="text-base font-semibold text-[#f0ece4] tracking-tight">
-                          {group.name}
-                        </h3>
-                        <p className="text-xs text-[#a39d92]">
-                          {group.skills.length} verified technologies
-                        </p>
-                      </div>
+        {/* Categorized Skills Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filteredCategories.map((category) => {
+            const Icon = iconMap[category.icon] || Cpu;
+            return (
+              <div
+                key={category.id}
+                className="p-5 sm:p-6 rounded-[22px] bg-[#fffdf9] border border-[#e6e1d6] hover:border-[#d5e0d8] hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <div className="p-2 rounded-xl bg-[#e7eee8] text-[#1f6146]">
+                      <Icon className="w-4 h-4" />
                     </div>
+                    <h3 className="font-semibold text-sm text-[#1f6146]">
+                      {category.name}
+                    </h3>
+                  </div>
 
-                    <p className="text-xs text-[#a39d92] leading-relaxed">
-                      {group.description}
-                    </p>
+                  <p className="text-xs text-[#6d6a62] mb-4 leading-relaxed">
+                    {category.description}
+                  </p>
 
-                    {/* Skill Badges */}
-                    <div className="flex flex-wrap gap-2 pt-2">
-                      {group.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#131210] border border-[#2e2b26] text-[#f0ece4] text-xs font-medium hover:border-[#f08a5d]/60 transition-colors"
-                        >
-                          <Check className="w-3 h-3 text-[#f08a5d]" />
-                          <span>{skill}</span>
-                        </span>
-                      ))}
-                    </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {category.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-2.5 py-1 rounded-full bg-[rgba(27,26,23,0.05)] text-xs text-[#3f3c36] font-medium hover:bg-[#e7eee8] hover:text-[#173d2c] transition-colors"
+                      >
+                        {skill}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        )}
+
+                <div className="pt-4 mt-4 border-t border-[#e6e1d6] flex items-center justify-between text-[11px] font-mono text-[#6d6a62]">
+                  <span>{category.skills.length} competencies</span>
+                  <span className="text-[#1f6146]">Production Verified</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
       </div>
     </section>
   );
 };
+
+export default Skills;

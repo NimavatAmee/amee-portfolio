@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Mail, Phone } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 const LinkedInIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
@@ -16,81 +16,68 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[#2e2b26] bg-[#1c1a17] py-12 relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="border-t border-[#e6e1d6] bg-[#f7f5f0] py-10 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#2e2b26]">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           
           {/* Brand info */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full p-[1.5px] bg-[#f08a5d] shadow-sm">
+            <div className="w-7 h-7 rounded-full p-[1.5px] bg-[#1f6146] shadow-sm">
               <img 
                 src="/images/amee-avatar.jpg" 
                 alt="Amee Nimavat" 
-                className="w-full h-full object-cover rounded-full filter grayscale contrast-[1.02]" 
+                className="w-full h-full object-cover rounded-full" 
               />
             </div>
             <div>
-              <span className="font-serif text-lg text-[#f0ece4] tracking-tight">
+              <span className="font-display font-semibold text-sm text-[#1b1a17]">
                 {PERSONAL_INFO.name}
               </span>
-              <span className="text-[#a39d92] text-xs ml-2">
+              <span className="text-[#6d6a62] text-xs ml-2">
                 · {PERSONAL_INFO.role}
               </span>
             </div>
           </div>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-6 text-xs text-[#a39d92]">
+          {/* Social Links & Back to Top */}
+          <div className="flex items-center gap-5 text-xs text-[#6d6a62]">
             <a
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#f08a5d] transition-colors flex items-center gap-1.5"
-              aria-label="LinkedIn profile"
+              className="hover:text-[#1f6146] transition-colors flex items-center gap-1.5"
             >
-              <LinkedInIcon className="w-4 h-4" />
+              <LinkedInIcon className="w-3.5 h-3.5" />
               <span>LinkedIn</span>
             </a>
 
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="hover:text-[#f08a5d] transition-colors flex items-center gap-1.5"
-              aria-label="Send Email"
+              className="hover:text-[#1f6146] transition-colors"
             >
-              <Mail className="w-4 h-4" />
-              <span>Email</span>
+              Email
             </a>
 
-            <a
-              href={`tel:${PERSONAL_INFO.phone.replace(/\s+/g, '')}`}
-              className="hover:text-[#f08a5d] transition-colors flex items-center gap-1.5"
-              aria-label="Call or WhatsApp"
+            <button
+              onClick={scrollToTop}
+              className="p-2 rounded-full bg-[#fffdf9] border border-[#e6e1d6] hover:border-[#1f6146] text-[#1b1a17] transition-all hover:-translate-y-0.5 shadow-sm"
+              title="Scroll back to top"
+              aria-label="Scroll back to top"
             >
-              <Phone className="w-4 h-4" />
-              <span>Phone</span>
-            </a>
+              <ArrowUp className="w-3.5 h-3.5" />
+            </button>
           </div>
-
-          {/* Back to top */}
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#131210] border border-[#2e2b26] text-xs text-[#a39d92] hover:text-[#f0ece4] hover:border-[#f08a5d] transition-colors"
-            aria-label="Scroll back to top"
-          >
-            <span>Back to top</span>
-            <ArrowUp className="w-3.5 h-3.5 text-[#f08a5d]" />
-          </button>
 
         </div>
 
-        {/* Bottom copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#a39d92] gap-2">
-          <p>© {currentYear} {PERSONAL_INFO.name}. All rights reserved.</p>
-          <p className="fine text-[11px] text-[#a39d92]">Surat, Gujarat, India · Open to remote opportunities</p>
+        <div className="mt-6 pt-6 border-t border-[#e6e1d6] text-center text-xs text-[#6d6a62]">
+          © {currentYear} {PERSONAL_INFO.name}. All rights reserved.
         </div>
 
       </div>
     </footer>
   );
 };
+
+export default Footer;
