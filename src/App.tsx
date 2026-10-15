@@ -3,7 +3,6 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Skills } from './components/Skills';
-import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
@@ -14,7 +13,7 @@ export const App: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState<number>(0);
 
   useEffect(() => {
-    const sections = ['top', 'about', 'skills', 'experience', 'projects', 'education', 'contact'];
+    const sections = ['top', 'about', 'skills', 'projects', 'education', 'contact'];
 
     const handleScroll = () => {
       // Calculate scroll progress percentage
@@ -64,7 +63,6 @@ export const App: React.FC = () => {
         <Hero />
         <About />
         <Skills />
-        <Experience />
         <Projects />
         <Education />
         <Contact />
