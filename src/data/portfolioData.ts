@@ -170,12 +170,12 @@ export const EXPERIENCES: ExperienceItem[] = [
       {
         name: "Refund Tracking App",
         points: [
-          "Built a React Native / Expo app that uses AI to extract refund details from email and cross-verify them against Plaid transaction data.",
+          "Built a React Native / Expo app that uses AI to extract refund details from emails and cross-verify them against transaction records.",
           "Added missing-refund alerts, subscription and store-credit monitoring, and Google authentication, giving users full visibility into pending refunds."
         ]
       }
     ],
-    techTags: ["React Native", "Expo", "TypeScript", "Zustand", "SQLite", "Plaid API", "Background Sync", "Android Widgets", "Voice AI"]
+    techTags: ["React Native", "Expo", "TypeScript", "Zustand", "SQLite", "Background Sync", "Android Widgets", "Voice AI"]
   },
   {
     id: "tagline",
@@ -250,7 +250,6 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: "Database",
     skills: [
       "REST APIs",
-      "Plaid API Integration",
       "Firebase (Auth, Firestore, FCM)",
       "Crashlytics & Remote Config",
       "Firebase Analytics",
