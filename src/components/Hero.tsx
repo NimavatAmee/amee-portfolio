@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, RefreshCw, Database } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const Hero: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState<'expense' | 'webrtc' | 'transit'>('expense');
+  const [activeDemo, setActiveDemo] = useState<'expense' | 'webrtc' | 'deskly'>('deskly');
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -120,14 +120,14 @@ export const Hero: React.FC = () => {
                     WebRTC
                   </button>
                   <button
-                    onClick={() => setActiveDemo('transit')}
+                    onClick={() => setActiveDemo('deskly')}
                     className={`px-2.5 py-0.5 rounded-full font-medium transition-all ${
-                      activeDemo === 'transit'
+                      activeDemo === 'deskly'
                         ? 'bg-[#1b1a17] text-[#f7f5f0] shadow-sm'
                         : 'text-[#6d6a62] hover:text-[#1b1a17]'
                     }`}
                   >
-                    Transit
+                    Deskly
                   </button>
                 </div>
               </div>
@@ -188,26 +188,44 @@ export const Hero: React.FC = () => {
                   </div>
                 )}
 
-                {activeDemo === 'transit' && (
+                {activeDemo === 'deskly' && (
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-[#6d6a62] font-medium">SmartHaul Bus Transport</span>
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#eee6d8] text-[10px] font-mono text-[#6d5024] font-semibold">
-                        📍 Route Active
+                      <span className="text-xs text-[#6d6a62] font-medium">Deskly Shipping Logistics</span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#e7eee8] text-[10px] font-mono text-[#1f6146] font-semibold border border-[#d5e0d8]">
+                        <RefreshCw className="w-2.5 h-2.5 animate-spin text-[#1f6146]" />
+                        <span>SQLite Syncing...</span>
                       </span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="text-sm font-semibold text-[#1b1a17]">Route 42 — City Express</div>
-                        <div className="text-[11px] text-[#1f6146] font-medium">Next: Central Station (4 min)</div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-baseline justify-between text-xs">
+                        <div>
+                          <div className="text-sm font-semibold text-[#1b1a17]">
+                            Local SQLite → Cloud Server
+                          </div>
+                          <div className="text-[11px] text-[#6d6a62]">
+                            Syncing 18 employee shift & attendance logs
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <span className="text-xs font-mono font-semibold text-[#1f6146]">84% Done</span>
+                          <div className="text-[10px] font-mono text-[#6d6a62]">15/18 queued</div>
+                        </div>
                       </div>
-                      <div className="px-2.5 py-1 rounded bg-[#fffdf9] border border-[#e6e1d6] text-[10px] font-mono text-[#3f3c36] font-semibold text-center">
-                        🎫 QR VALID
+
+                      {/* Animated Sync Progress Bar */}
+                      <div className="w-full bg-[#e6e1d6] h-1.5 rounded-full overflow-hidden">
+                        <div className="bg-[#1f6146] h-full rounded-full transition-all duration-500 animate-pulse w-[84%]" />
                       </div>
                     </div>
+
                     <div className="flex items-center justify-between pt-1 border-t border-[#e6e1d6]/60 text-xs">
-                      <span className="text-[#3f3c36] font-medium">🚌 Real-Time GPS & Ticket Validation</span>
-                      <span className="text-[10px] font-mono text-[#6d6a62]">Offline Ready</span>
+                      <span className="text-[#3f3c36] font-medium flex items-center gap-1.5">
+                        <Database className="w-3 h-3 text-[#1f6146]" />
+                        <span>Maritime Offline Queue (Dock/Sea)</span>
+                      </span>
+                      <span className="text-[10px] font-mono text-[#1f6146] font-medium">Conflict-Free Merge</span>
                     </div>
                   </div>
                 )}
@@ -278,7 +296,7 @@ export const Hero: React.FC = () => {
                 Cross-Platform
               </h3>
               <p className="text-sm text-[#4a4740] leading-relaxed">
-                React Native & Expo with Hermes bytecode, Reanimated 3 fluid gestures, and native bridges for iOS & Android.
+                React Native & Expo with Hermes bytecode, Reanimated 3 fluid gestures.
               </p>
             </div>
 
