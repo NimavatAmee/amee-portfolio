@@ -78,7 +78,7 @@ export const About: React.FC = () => {
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fffdf9]/95 backdrop-blur-md border border-[#e6e1d6] text-[11px] font-semibold text-[#1f6146] shadow-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#1f6146] animate-pulse" />
-                    <span>Open to Remote</span>
+                    <span>Remote · Hybrid · Onsite</span>
                   </span>
                   <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#fffdf9]/95 backdrop-blur-md border border-[#e6e1d6] text-[11px] text-[#4a4740] shadow-sm font-medium">
                     <MapPin className="w-3 h-3 text-[#1f6146]" />
