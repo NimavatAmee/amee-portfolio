@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 relative">
+    <section id="contact" className="py-16 md:py-24 relative scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Inverted Dark Contact Card matching Yash Kava's .contact */}

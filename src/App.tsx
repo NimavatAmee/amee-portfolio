@@ -23,7 +23,7 @@ export const App: React.FC = () => {
       }
 
       // Active section spy
-      const scrollPosition = window.scrollY + 200;
+      const scrollPosition = window.scrollY + 140;
       for (let i = sections.length - 1; i >= 0; i--) {
         const sectionId = sections[i];
         const element = document.getElementById(sectionId);

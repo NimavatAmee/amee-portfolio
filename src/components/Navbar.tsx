@@ -19,15 +19,26 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
+    if (href === '#top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 90;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
   return (
-    <div className="sticky top-3 sm:top-4 z-50 px-4 sm:px-6 w-full max-w-4xl mx-auto">
-      <header className="glass-nav-bar rounded-full px-3 sm:px-4 py-2 flex items-center justify-between gap-4 transition-all duration-300">
+    <div className="sticky top-0 z-50 w-full bg-[#f7f5f0]/95 backdrop-blur-md border-b border-[#e6e1d6]/80 py-2.5 sm:py-3 transition-all duration-200">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <header className="glass-nav-bar rounded-full px-3 sm:px-4 py-2 flex items-center justify-between gap-4 transition-all duration-300">
         
         {/* Brand / Logo */}
         <a 
@@ -125,6 +136,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 };

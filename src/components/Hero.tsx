@@ -7,12 +7,24 @@ export const Hero: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState<'expense' | 'webrtc' | 'deskly'>('deskly');
 
   const scrollTo = (id: string) => {
+    if (id === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (el) {
+      const headerOffset = 90;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
-    <section id="top" className="pt-8 pb-16 md:pt-12 md:pb-20 relative">
+    <section id="top" className="pt-6 pb-16 md:pt-10 md:pb-20 relative scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Main Hero Grid */}

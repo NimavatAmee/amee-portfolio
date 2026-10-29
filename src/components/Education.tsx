@@ -3,7 +3,7 @@ import { EDUCATION } from '../data/portfolioData';
 
 export const Education: React.FC = () => {
   return (
-    <section id="education" className="py-16 md:py-20 relative border-t border-[#e6e1d6]">
+    <section id="education" className="py-16 md:py-20 relative border-t border-[#e6e1d6] scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Header */}

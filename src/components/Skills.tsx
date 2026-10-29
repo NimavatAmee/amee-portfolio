@@ -46,7 +46,7 @@ export const Skills: React.FC = () => {
   const totalSkillsCount = SKILL_CATEGORIES.reduce((acc, cat) => acc + cat.skills.length, 0);
 
   return (
-    <section id="skills" className="py-16 md:py-24 relative border-t border-[#e6e1d6]">
+    <section id="skills" className="py-16 md:py-24 relative border-t border-[#e6e1d6] scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Header */}
